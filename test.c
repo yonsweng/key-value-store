@@ -178,7 +178,7 @@ void do_benchmark2(struct KVS_T *kvs, int num_threads, THREAD_FUNC tf1, THREAD_F
         args[i].ss = &shared;
         args[i].ts = &tss[i];
         args[i].ts->kvs = kvs;
-        args[i].tf = tf1;
+        args[i].tf = tf2;
 
         pthread_create(&args[i].ts->tid, NULL, thread_main, &args[i]);
     }

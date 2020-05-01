@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = @CMakeFiles/cloud_computing.dir/includes_C.rsp
+C_INCLUDES = @CMakeFiles/cloud-computing.dir/includes_C.rsp
 

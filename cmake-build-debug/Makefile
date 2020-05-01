@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -E re
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Yeonung\Desktop\cloud_computing
+CMAKE_SOURCE_DIR = C:\Users\Yeonung\Desktop\cloud-computing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Yeonung\Desktop\cloud_computing\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Yeonung\Desktop\cloud-computing\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Yeonung\Desktop\cloud_computing\cmake-build-debug\CMakeFiles C:\Users\Yeonung\Desktop\cloud_computing\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Yeonung\Desktop\cloud-computing\cmake-build-debug\CMakeFiles C:\Users\Yeonung\Desktop\cloud-computing\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Yeonung\Desktop\cloud_computing\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Yeonung\Desktop\cloud-computing\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cloud_computing
+# Target rules for targets named cloud-computing
 
 # Build rule for target.
-cloud_computing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 cloud_computing
-.PHONY : cloud_computing
+cloud-computing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 cloud-computing
+.PHONY : cloud-computing
 
 # fast build rule for target.
-cloud_computing/fast:
-	$(MAKE) -f CMakeFiles\cloud_computing.dir\build.make CMakeFiles/cloud_computing.dir/build
-.PHONY : cloud_computing/fast
+cloud-computing/fast:
+	$(MAKE) -f CMakeFiles\cloud-computing.dir\build.make CMakeFiles/cloud-computing.dir/build
+.PHONY : cloud-computing/fast
 
 kvs.obj: kvs.c.obj
 
@@ -128,7 +128,7 @@ kvs.obj: kvs.c.obj
 
 # target to build an object file
 kvs.c.obj:
-	$(MAKE) -f CMakeFiles\cloud_computing.dir\build.make CMakeFiles/cloud_computing.dir/kvs.c.obj
+	$(MAKE) -f CMakeFiles\cloud-computing.dir\build.make CMakeFiles/cloud-computing.dir/kvs.c.obj
 .PHONY : kvs.c.obj
 
 kvs.i: kvs.c.i
@@ -137,7 +137,7 @@ kvs.i: kvs.c.i
 
 # target to preprocess a source file
 kvs.c.i:
-	$(MAKE) -f CMakeFiles\cloud_computing.dir\build.make CMakeFiles/cloud_computing.dir/kvs.c.i
+	$(MAKE) -f CMakeFiles\cloud-computing.dir\build.make CMakeFiles/cloud-computing.dir/kvs.c.i
 .PHONY : kvs.c.i
 
 kvs.s: kvs.c.s
@@ -146,7 +146,7 @@ kvs.s: kvs.c.s
 
 # target to generate assembly for a file
 kvs.c.s:
-	$(MAKE) -f CMakeFiles\cloud_computing.dir\build.make CMakeFiles/cloud_computing.dir/kvs.c.s
+	$(MAKE) -f CMakeFiles\cloud-computing.dir\build.make CMakeFiles/cloud-computing.dir/kvs.c.s
 .PHONY : kvs.c.s
 
 list.obj: list.c.obj
@@ -155,7 +155,7 @@ list.obj: list.c.obj
 
 # target to build an object file
 list.c.obj:
-	$(MAKE) -f CMakeFiles\cloud_computing.dir\build.make CMakeFiles/cloud_computing.dir/list.c.obj
+	$(MAKE) -f CMakeFiles\cloud-computing.dir\build.make CMakeFiles/cloud-computing.dir/list.c.obj
 .PHONY : list.c.obj
 
 list.i: list.c.i
@@ -164,7 +164,7 @@ list.i: list.c.i
 
 # target to preprocess a source file
 list.c.i:
-	$(MAKE) -f CMakeFiles\cloud_computing.dir\build.make CMakeFiles/cloud_computing.dir/list.c.i
+	$(MAKE) -f CMakeFiles\cloud-computing.dir\build.make CMakeFiles/cloud-computing.dir/list.c.i
 .PHONY : list.c.i
 
 list.s: list.c.s
@@ -173,7 +173,7 @@ list.s: list.c.s
 
 # target to generate assembly for a file
 list.c.s:
-	$(MAKE) -f CMakeFiles\cloud_computing.dir\build.make CMakeFiles/cloud_computing.dir/list.c.s
+	$(MAKE) -f CMakeFiles\cloud-computing.dir\build.make CMakeFiles/cloud-computing.dir/list.c.s
 .PHONY : list.c.s
 
 test.obj: test.c.obj
@@ -182,7 +182,7 @@ test.obj: test.c.obj
 
 # target to build an object file
 test.c.obj:
-	$(MAKE) -f CMakeFiles\cloud_computing.dir\build.make CMakeFiles/cloud_computing.dir/test.c.obj
+	$(MAKE) -f CMakeFiles\cloud-computing.dir\build.make CMakeFiles/cloud-computing.dir/test.c.obj
 .PHONY : test.c.obj
 
 test.i: test.c.i
@@ -191,7 +191,7 @@ test.i: test.c.i
 
 # target to preprocess a source file
 test.c.i:
-	$(MAKE) -f CMakeFiles\cloud_computing.dir\build.make CMakeFiles/cloud_computing.dir/test.c.i
+	$(MAKE) -f CMakeFiles\cloud-computing.dir\build.make CMakeFiles/cloud-computing.dir/test.c.i
 .PHONY : test.c.i
 
 test.s: test.c.s
@@ -200,7 +200,7 @@ test.s: test.c.s
 
 # target to generate assembly for a file
 test.c.s:
-	$(MAKE) -f CMakeFiles\cloud_computing.dir\build.make CMakeFiles/cloud_computing.dir/test.c.s
+	$(MAKE) -f CMakeFiles\cloud-computing.dir\build.make CMakeFiles/cloud-computing.dir/test.c.s
 .PHONY : test.c.s
 
 # Help Target
@@ -209,7 +209,7 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... cloud_computing
+	@echo ... cloud-computing
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... kvs.obj
