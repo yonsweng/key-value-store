@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Yeonung/Desktop/cloud_computing/kvs.c
+list.h
+C:/Users/Yeonung/Desktop/cloud_computing/list.h
+kvs.h
+C:/Users/Yeonung/Desktop/cloud_computing/kvs.h
+stdlib.h
+-
+string.h
+-
+
+C:/Users/Yeonung/Desktop/cloud_computing/kvs.h
+pthread.h
+-
+list.h
+C:/Users/Yeonung/Desktop/cloud_computing/list.h
+
+C:/Users/Yeonung/Desktop/cloud_computing/list.h
+stddef.h
+-
+
+C:/Users/Yeonung/Desktop/cloud_computing/test.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+time.h
+-
+math.h
+-
+list.h
+C:/Users/Yeonung/Desktop/cloud_computing/list.h
+kvs.h
+C:/Users/Yeonung/Desktop/cloud_computing/kvs.h
+
