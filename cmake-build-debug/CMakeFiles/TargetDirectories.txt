@@ -1,3 +1,0 @@
-C:/Users/Yeonung/Desktop/cloud-computing/cmake-build-debug/CMakeFiles/cloud-computing.dir
-C:/Users/Yeonung/Desktop/cloud-computing/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Yeonung/Desktop/cloud-computing/cmake-build-debug/CMakeFiles/rebuild_cache.dir
