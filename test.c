@@ -7,7 +7,7 @@
 #include "kvs.h"
 
 #define NUM_NODES        1000000
-#define NUM_THREADS        10
+#define NUM_THREADS        20
 
 // void *search(void *arg) {}
 // void *insert(void *arg) {}
@@ -29,7 +29,7 @@ struct THREAD_STATE_T {
     time_t start;
     time_t finish;
     int done;
-    struct KVS_T *kvs;
+    skiplist *kvs;
 };
 
 struct THREAD_ARG_T {
@@ -67,7 +67,7 @@ void *thread_main(void *arg) {
     return NULL;
 }
 
-void do_benchmark(struct KVS_T *kvs, int num_threads, THREAD_FUNC tf) {
+void do_benchmark(skiplist *kvs, int num_threads, THREAD_FUNC tf) {
     int i, ret;
     double elapsed = 0, num_ops = 0;
     struct SHARED_STATE_T shared;
@@ -134,7 +134,7 @@ void do_benchmark(struct KVS_T *kvs, int num_threads, THREAD_FUNC tf) {
     free(args);
 }
 
-void do_benchmark2(struct KVS_T *kvs, int num_threads, THREAD_FUNC tf1, THREAD_FUNC tf2, double ratio1, double ratio2) {
+void do_benchmark2(skiplist *kvs, int num_threads, THREAD_FUNC tf1, THREAD_FUNC tf2, double ratio1, double ratio2) {
     int num_threads1 = (int) round(num_threads * ratio1 / (ratio1 + ratio2));
     int num_threads2 = num_threads - num_threads1;
     int i, ret;
@@ -215,7 +215,7 @@ void do_benchmark2(struct KVS_T *kvs, int num_threads, THREAD_FUNC tf1, THREAD_F
 void search(void *arg) {
     int i;
     struct THREAD_STATE_T *ts = arg;
-    struct KVS_NODE_T *p_node;
+    snode *p_node;
 
     for (i = 0; i < NUM_NODES; i++) {
         p_node = kv_get(ts->kvs, i);
@@ -231,12 +231,9 @@ void search(void *arg) {
 void insert(void *arg) {
     int i;
     struct THREAD_STATE_T *ts = arg;
-    struct KVS_NODE_T node;
 
     for (i = 0; i < NUM_NODES; i++) {
-        node.key = i;
-        node.value = i;
-        kv_put(ts->kvs, &node);
+        kv_put(ts->kvs, i, i);
 
         ts->done++;
         if ((ts->done % 10000) == 0)
@@ -245,8 +242,7 @@ void insert(void *arg) {
 }
 
 int main() {
-    struct KVS_T *my_kvs;
-    struct KVS_NODE_T node;
+    skiplist *my_kvs;
 
     // 1. create key/value store
     my_kvs = kv_create_db();
@@ -256,19 +252,17 @@ int main() {
     }
 
     // 사전에 key-value store에 필요한 key 개수만큼 채워라!
-    for (int i = 0; i < 100000; i++) {
-        node.key = i;
-        node.value = i;
-        kv_put(my_kvs, &node);
+    for (int i = 0; i < 10000; i++) {
+        kv_put(my_kvs, i, i);
     }
 
     printf("start\n");
     clock_t start_clock = clock();
     do_benchmark2(my_kvs, NUM_THREADS, search, insert, 0.9, 0.1);
     clock_t end_clock = clock();
-    printf("%f sec\n", (end_clock - start_clock) / (double)CLOCKS_PER_SEC);
+    printf("%f sec\n", (end_clock - start_clock) / (double) CLOCKS_PER_SEC);
 
-    kv_destroy_db(my_kvs);
+//    kv_destroy_db(my_kvs);
 
     printf("test is done!\n");
 

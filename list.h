@@ -2,7 +2,7 @@
 
 #include <stddef.h>
 
-struct LIST_HEAD_T{
+struct LIST_HEAD_T {
     struct LIST_HEAD_T *next, *prev;
 };
 
